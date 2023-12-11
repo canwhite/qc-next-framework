@@ -1,4 +1,6 @@
 'use client'
+
+//处理的是顶层layout和template
 export default function Error({ error, reset }:{
   error:Error,
   reset:()=>void
