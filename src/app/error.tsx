@@ -1,7 +1,8 @@
 'use client' // 错误组件必须是客户端组件
-// dashboard/error.js
 import { useEffect } from 'react'
  
+
+//还是需要一个error.tsx，global-error.tsx是为了layout和template的
 export default function Error({ error, reset }:{error:Error,reset:()=>void}) {
   useEffect(() => {
     console.error(error)

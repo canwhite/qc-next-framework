@@ -1,6 +1,5 @@
 "use client"
-import { useEffect, useState , use} from "react";
-import {notFound} from "next/navigation"
+import {useState , use, useEffect} from "react";
 async function getData() {
   await new Promise((resolve) => setTimeout(resolve, 3000))
   return {
@@ -8,18 +7,27 @@ async function getData() {
   }
 }
 
-//don't use async, enable experimental features if use new feature
+//client don't use async, enable experimental features if use new feature
+//server can use async
 export default function Home() {
 
-  const {message} = use(getData());
+  const [message,setMessage] = useState("");
+  useEffect(()=>{
+    (async()=>{
+      const { message } = await getData()
+      setMessage(message);
+    })()
+  },[])
+
+  const [error, setError] = useState(false);
+  const handleGetError = () => {
+    setError(true);
+  };
 
   return (
-    <div>
+    <>
       <h1>{message}</h1>
-      <button onClick={()=>{
-        console.log("throw");
-        throw new Error('This is a custom error message');
-      }}>Trigger Error</button>
-    </div>
+      {error ? Error() : <button onClick={handleGetError}>Get Error</button>}
+    </>
   );
 }
