@@ -1,13 +1,12 @@
-import { getAllUser } from './../../../../services/userService';
 import {NextResponse} from "next/server"
+import client from "../../../../client"
 
 export const GET = async (req:Request)=>{
     const {searchParams} = new URL(req.url);
-    //todo
-    const allUsers = await getAllUser();
+    const users = await client.user.findMany()
     return NextResponse.json({
         success:true,
         message:"success",
-        data:allUsers,
+        data:users,
     })
 }
