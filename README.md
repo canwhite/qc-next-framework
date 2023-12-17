@@ -1,5 +1,5 @@
 ## qc-next-framework
-前端全栈中的PHP，区别于Nest，前端全栈中的Spring Boot 
+前端全栈中的PHP，区别于Nest-前端全栈中的Spring Boot 
 
 ## Getting Started
 
