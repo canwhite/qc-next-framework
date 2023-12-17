@@ -1,5 +1,5 @@
 ## qc-next-framework
-前端全栈中的PHP，区别于Nest-前端全栈中的Spring Boot 
+PHP in the front-end full-stack, as distinguished from Nest - Spring Boot in this front-end full-stack 
 
 ## Getting Started
 
@@ -16,13 +16,15 @@ bun dev
 ```
 
 ## WHY
-界面后台一把梭
+Interface backend full stack
 
 ## HOW
 * app router
 * client and server component
 * api
 * prisma
+* ioredis
+* middleware
 
 ## Learn More
 
