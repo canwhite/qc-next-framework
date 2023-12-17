@@ -22,6 +22,7 @@ bun dev
 * app router
 * client and server component
 * api
+* prisma
 
 ## Learn More
 
