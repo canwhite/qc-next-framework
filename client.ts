@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-
+//singleton
 class PrismaClientSingleton {
   private static prisma: PrismaClient | null = null;
 
