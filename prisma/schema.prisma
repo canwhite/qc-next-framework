@@ -1,6 +1,10 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+//npx prisma migrate dev --name init //第一次
+//npx prisma migrate                 //后续更新
+//npx prisma migrate --dry-run       //干跑,不进库
+
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
