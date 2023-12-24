@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
-import redis from "../../../../redis";
+import redis from '../../../../../redis';
 
-export const GET = async (req:Requet)=>{
+export const GET = async (req:Request)=>{
     const {searchParams} = new URL(req.url);
     const value = 'myValue'; //这里从search params里取
     redis.set('myKey', value);
